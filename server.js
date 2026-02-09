@@ -1,7 +1,7 @@
 const { execFile } = require('child_process'); // Use execFile instead of exec
 const express = require('express');
 const app = express();
-
+const AWS_KEY = "AKIAIMNO7CQH6O5A6XYZ";
 app.get('/run', (req, res) => {
     const userPath = req.query.path;
 
