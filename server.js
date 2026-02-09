@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 app.get('/run', (req, res) => {
-  // DANGEROUS: User input flows directly into a shell command
+  // DANGEROUS: User input flows directly into a shell command CHANGE HERE
   exec("ls " + req.query.path); 
   res.send("Command triggered.");
 });
