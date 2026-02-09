@@ -65,12 +65,10 @@ jobs:
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
-      uses: github/codeql-action/init@v3
+      uses: github/codeql-action/init@v4  # Change this to v4
       with:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
-        # ADD THESE TWO LINES BELOW:
-        # 'security-extended' adds extra checks, and the path points to your custom folder
         queries: security-extended, ./.github/codeql/custom-queries/
     # If the analyze step fails for one of the languages you are analyzing with
     # "We were unable to automatically build your code", modify the matrix above
